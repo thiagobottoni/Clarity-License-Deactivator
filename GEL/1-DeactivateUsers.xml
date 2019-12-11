@@ -80,7 +80,7 @@
 				  <Header action="write" externalSource="NIKU" objectType="user" version="6.0"/>
 				  <Users>
 					<User userName="${username}" externalId="${externalid}" userStatus="INACTIVE" userUid="${useruid}">
-					<PersonalInformation emailAddress="${emailaddress}" firstName="${firstname}" lastName="lastname"/>
+					<PersonalInformation emailAddress="${emailaddress}" firstName="${firstname}" lastName="${lastname}"/>
 					</User>
 				  </Users>
 				</NikuDataBus>
