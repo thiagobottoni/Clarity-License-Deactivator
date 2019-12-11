@@ -24,7 +24,7 @@ It implements a process called Deactivate Users which you can both manually run 
 - Check the output file for errors at C:\temp\cld_install\output
 
 ## Languages
-This release is available in two languages: English and Brazilian Portuguese
+This release is available in two languages: English and Brazilian Portuguese.
 
 ## Important
 It works for On Premise customers only, even if you use LDAP, SSO or Clarity user directory! It does not work for SaaS customers, since Broadcom On Demand Portal has its own user directory system.
