@@ -1,0 +1,416 @@
+<NikuDataBus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/nikuxog_contentPack.xsd">
+	<Header action="write" externalSource="NIKU" objectType="contentPack" version="8.0"/>
+	<contentPack update="true">
+		<Processes>
+			<Process allowOneRunningInstance="true" code="tbg_deactivate_users" createdBy="admin" endStep="Finish" source="customer" startOption="ON_DEMAND" startStep="Start">
+				<nls description="This process deactivate users who have not logged in to Clarity for more than 90 days" languageCode="ca" name="Deactivate Users"/>
+				<nls description="This process deactivate users who have not logged in to Clarity for more than 90 days" languageCode="cs" name="Deactivate Users"/>
+				<nls description="This process deactivate users who have not logged in to Clarity for more than 90 days" languageCode="da" name="Deactivate Users"/>
+				<nls description="This process deactivate users who have not logged in to Clarity for more than 90 days" languageCode="de" name="Deactivate Users"/>
+				<nls description="This process deactivate users who have not logged in to Clarity for more than 90 days" languageCode="en" name="Deactivate Users"/>
+				<nls description="This process deactivate users who have not logged in to Clarity for more than 90 days" languageCode="es" name="Deactivate Users"/>
+				<nls description="This process deactivate users who have not logged in to Clarity for more than 90 days" languageCode="fi" name="Deactivate Users"/>
+				<nls description="This process deactivate users who have not logged in to Clarity for more than 90 days" languageCode="fr" name="Deactivate Users"/>
+				<nls description="This process deactivate users who have not logged in to Clarity for more than 90 days" languageCode="hu" name="Deactivate Users"/>
+				<nls description="This process deactivate users who have not logged in to Clarity for more than 90 days" languageCode="it" name="Deactivate Users"/>
+				<nls description="This process deactivate users who have not logged in to Clarity for more than 90 days" languageCode="ja" name="Deactivate Users"/>
+				<nls description="This process deactivate users who have not logged in to Clarity for more than 90 days" languageCode="ko" name="Deactivate Users"/>
+				<nls description="This process deactivate users who have not logged in to Clarity for more than 90 days" languageCode="nl" name="Deactivate Users"/>
+				<nls description="This process deactivate users who have not logged in to Clarity for more than 90 days" languageCode="no" name="Deactivate Users"/>
+				<nls description="This process deactivate users who have not logged in to Clarity for more than 90 days" languageCode="pl" name="Deactivate Users"/>
+				<nls description="Este processo inativa usuários que não acessaram o Clarity há mais de 90 dias" languageCode="pt" name="Inativa Usuários"/>
+				<nls description="This process deactivate users who have not logged in to Clarity for more than 90 days" languageCode="ru" name="Deactivate Users"/>
+				<nls description="This process deactivate users who have not logged in to Clarity for more than 90 days" languageCode="sv" name="Deactivate Users"/>
+				<nls description="This process deactivate users who have not logged in to Clarity for more than 90 days" languageCode="tr" name="Deactivate Users"/>
+				<nls description="This process deactivate users who have not logged in to Clarity for more than 90 days" languageCode="zh" name="Deactivate Users"/>
+				<nls description="This process deactivate users who have not logged in to Clarity for more than 90 days" languageCode="zh_TW" name="Deactivate Users"/>
+				<Security>
+					<UserSecurity rightCode="PROCESS-DEF-INST-INITIATE" userName="admin"/>
+					<UserSecurity rightCode="PROCESS-DEF-INST-WRITE" userName="admin"/>
+				</Security>
+				<Objects>
+					<Object manualStart="false" name="thisXmlDocument" objectType="xml_document" partitionCode="NIKU.ROOT" partitionModeCode="PARTITION_ONLY" type="BPM_POT_PRIMARY"/>
+				</Objects>
+				<Steps>
+					<Step id="Start" isMileStone="false" sequenceNo="1">
+						<nls languageCode="ca" name="Start"/>
+						<nls languageCode="cs" name="Start"/>
+						<nls languageCode="da" name="Start"/>
+						<nls languageCode="de" name="Start"/>
+						<nls languageCode="en" name="Start"/>
+						<nls languageCode="es" name="Start"/>
+						<nls languageCode="fi" name="Start"/>
+						<nls languageCode="fr" name="Start"/>
+						<nls languageCode="hu" name="Start"/>
+						<nls languageCode="it" name="Start"/>
+						<nls languageCode="ja" name="Start"/>
+						<nls languageCode="ko" name="Start"/>
+						<nls languageCode="nl" name="Start"/>
+						<nls languageCode="no" name="Start"/>
+						<nls languageCode="pl" name="Start"/>
+						<nls languageCode="pt" name="Start"/>
+						<nls languageCode="ru" name="Start"/>
+						<nls languageCode="sv" name="Start"/>
+						<nls languageCode="tr" name="Start"/>
+						<nls languageCode="zh" name="Start"/>
+						<nls languageCode="zh_TW" name="Start"/>
+						<Notifications notifyOwner="false">
+							<NotifyWhen stepCompleted="false" stepInError="false" stepStarted="false"/>
+							<Assignees/>
+						</Notifications>
+						<Operations/>
+						<TransitionRestrictions>
+							<TransitionRestriction>
+								<Join type="BPM_JT_NONE">
+									<Condition sequencNo="1" type="BPM_SCT_PRECONDITION"/>
+								</Join>
+							</TransitionRestriction>
+							<TransitionRestriction>
+								<Split type="BPM_ST_SEQUENCE">
+									<Condition sequencNo="1" type="BPM_SCT_POSTCONDITION">
+										<Transitions>
+											<Transition to="tbg_deactivate_users_step"/>
+										</Transitions>
+									</Condition>
+								</Split>
+							</TransitionRestriction>
+						</TransitionRestrictions>
+					</Step>
+					<Step id="Finish" isMileStone="false" sequenceNo="2">
+						<nls languageCode="ca" name="Finish"/>
+						<nls languageCode="cs" name="Finish"/>
+						<nls languageCode="da" name="Finish"/>
+						<nls languageCode="de" name="Finish"/>
+						<nls languageCode="en" name="Finish"/>
+						<nls languageCode="es" name="Finish"/>
+						<nls languageCode="fi" name="Finish"/>
+						<nls languageCode="fr" name="Finish"/>
+						<nls languageCode="hu" name="Finish"/>
+						<nls languageCode="it" name="Finish"/>
+						<nls languageCode="ja" name="Finish"/>
+						<nls languageCode="ko" name="Finish"/>
+						<nls languageCode="nl" name="Finish"/>
+						<nls languageCode="no" name="Finish"/>
+						<nls languageCode="pl" name="Finish"/>
+						<nls languageCode="pt" name="Finish"/>
+						<nls languageCode="ru" name="Finish"/>
+						<nls languageCode="sv" name="Finish"/>
+						<nls languageCode="tr" name="Finish"/>
+						<nls languageCode="zh" name="Finish"/>
+						<nls languageCode="zh_TW" name="Finish"/>
+						<Notifications notifyOwner="false">
+							<NotifyWhen stepCompleted="false" stepInError="false" stepStarted="false"/>
+							<Assignees/>
+						</Notifications>
+						<Operations/>
+						<TransitionRestrictions>
+							<TransitionRestriction>
+								<Join type="BPM_JT_NONE">
+									<Condition sequencNo="1" type="BPM_SCT_PRECONDITION"/>
+								</Join>
+							</TransitionRestriction>
+							<TransitionRestriction>
+								<Split type="BPM_ST_SEQUENCE">
+									<Condition sequencNo="1" type="BPM_SCT_POSTCONDITION">
+										<Transitions/>
+									</Condition>
+								</Split>
+							</TransitionRestriction>
+						</TransitionRestrictions>
+					</Step>
+					<Step id="tbg_deactivate_users_step" isMileStone="false" sequenceNo="3">
+						<nls languageCode="ca" name="Deactivate Users"/>
+						<nls languageCode="cs" name="Deactivate Users"/>
+						<nls languageCode="da" name="Deactivate Users"/>
+						<nls languageCode="de" name="Deactivate Users"/>
+						<nls languageCode="en" name="Deactivate Users"/>
+						<nls languageCode="es" name="Deactivate Users"/>
+						<nls languageCode="fi" name="Deactivate Users"/>
+						<nls languageCode="fr" name="Deactivate Users"/>
+						<nls languageCode="hu" name="Deactivate Users"/>
+						<nls languageCode="it" name="Deactivate Users"/>
+						<nls languageCode="ja" name="Deactivate Users"/>
+						<nls languageCode="ko" name="Deactivate Users"/>
+						<nls languageCode="nl" name="Deactivate Users"/>
+						<nls languageCode="no" name="Deactivate Users"/>
+						<nls languageCode="pl" name="Deactivate Users"/>
+						<nls languageCode="pt" name="Inativa Usuários"/>
+						<nls languageCode="ru" name="Deactivate Users"/>
+						<nls languageCode="sv" name="Deactivate Users"/>
+						<nls languageCode="tr" name="Deactivate Users"/>
+						<nls languageCode="zh" name="Deactivate Users"/>
+						<nls languageCode="zh_TW" name="Deactivate Users"/>
+						<Notifications notifyOwner="false">
+							<NotifyWhen stepCompleted="false" stepInError="false" stepStarted="false"/>
+							<Assignees/>
+						</Notifications>
+						<Operations>
+							<Action code="ACTION_01" synchronized="true" type="BPM_SAT_CUSTOM">
+								<nls languageCode="ca" name="Deactivate users"/>
+								<nls languageCode="cs" name="Deactivate users"/>
+								<nls languageCode="da" name="Deactivate users"/>
+								<nls languageCode="de" name="Deactivate users"/>
+								<nls languageCode="en" name="Deactivate users"/>
+								<nls languageCode="es" name="Deactivate users"/>
+								<nls languageCode="fi" name="Deactivate users"/>
+								<nls languageCode="fr" name="Deactivate users"/>
+								<nls languageCode="hu" name="Deactivate users"/>
+								<nls languageCode="it" name="Deactivate users"/>
+								<nls languageCode="ja" name="Deactivate users"/>
+								<nls languageCode="ko" name="Deactivate users"/>
+								<nls languageCode="nl" name="Deactivate users"/>
+								<nls languageCode="no" name="Deactivate users"/>
+								<nls languageCode="pl" name="Deactivate users"/>
+								<nls languageCode="pt" name="Inativa usuários"/>
+								<nls languageCode="ru" name="Deactivate users"/>
+								<nls languageCode="sv" name="Deactivate users"/>
+								<nls languageCode="tr" name="Deactivate users"/>
+								<nls languageCode="zh" name="Deactivate users"/>
+								<nls languageCode="zh_TW" name="Deactivate users"/>
+								<customScript languageCode="gel">
+									<scriptText>
+										<gel:script xmlns:core="jelly:core" xmlns:email="jelly:email" xmlns:file="jelly:com.niku.union.gel.FileTagLibrary"
+                  xmlns:ftp="jelly:com.niku.union.gel.FTPTagLibrary" xmlns:gel="jelly:com.niku.union.gel.GELTagLibrary"
+                  xmlns:soap="jelly:com.niku.union.gel.SOAPTagLibrary" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sql="jelly:sql"
+                  xmlns:xog="http://www.niku.com/xog" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+											<!-- Parameters -->
+											<gel:parameter default="xog" var="xogUser"/>
+											<!-- Setting the database -->
+											<core:catch var="dbConnection">
+												<gel:setDataSource dbId="Niku" var="database"/>
+											</core:catch>
+											<!-- Checking if database is available -->
+											<core:if test="${ dbConnection != null }">
+												<gel:log level="error" message="Database not available!"/>
+											</core:if>
+											<!-- Capturing custom script output -->
+											<core:catch var="customScript">
+												<!-- Getting session ID for the user defined above (var xogUser) -->
+												<core:new className="com.niku.union.security.DefaultSecurityIdentifier" var="securityId"/>
+												<core:invokeStatic className="com.niku.union.security.UserSessionControllerFactory" method="getInstance" var="xogInstance"/>
+												<core:set value="${xogInstance.init(xogUser, securityId)}" var="securityId"/>
+												<core:set value="${securityId.getSessionId()}" var="sessionID"/>
+												<!-- Checking if user can log in to Clarity -->
+												<core:choose>
+													<core:when test="${sessionID == null}">
+														<gel:log level="error" message="Cannot log in to Clarity with user ${xogUser}!"/>
+													</core:when>
+													<core:otherwise>
+														<gel:log level="debug" message="Logged in with user: ${xogUser}"/>
+														<gel:log level="debug" message="Session ID: ${sessionID}"/>
+													</core:otherwise>
+												</core:choose>
+												<!-- Fetching users who have not logged in to Clarity for over 90 days -->
+												<sql:query dataSource="${database}" escapeText="false" var="users"><![CDATA[
+			SELECT  user_name, 
+					user_uid,
+					external_id,
+					first_name, 
+					last_name,
+					email_address
+			FROM    cmn_sec_users
+			WHERE   user_status_id = 200 
+				AND user_name NOT IN ('admin', 'xog')
+				AND (TRUNC(CURRENT_DATE) - TRUNC(last_logged_in_date) > 90 OR last_logged_in_date IS NULL)
+			ORDER BY user_name
+		]]></sql:query>
+												<core:forEach items="${users.rows}" trim="true" var="row">
+													<core:set value="${row.user_name}" var="username"/>
+													<core:set value="${row.user_uid}" var="useruid"/>
+													<core:set value="${row.external_id}" var="externalid"/>
+													<core:set value="${row.first_name}" var="firstname"/>
+													<core:set value="${row.last_name}" var="lastname"/>
+													<core:set value="${row.email_address}" var="emailaddress"/>
+													<!-- Checking if external id is null -->
+													<core:if test="${ externalid == null }">
+														<core:set value=" " var="externalid"/>
+													</core:if>
+													<!-- Creating xog write to deactivate users -->
+													<gel:parse var="updateuser">
+														<NikuDataBus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/nikuxog_user.xsd">
+															<Header action="write" externalSource="NIKU" objectType="user" version="6.0"/>
+															<Users>
+																<User externalId="${externalid}" userName="${username}" userStatus="INACTIVE" userUid="${useruid}">
+																	<PersonalInformation emailAddress="${emailaddress}" firstName="${firstname}" lastName="lastname"/>
+																</User>
+															</Users>
+														</NikuDataBus>
+													</gel:parse>
+													<!-- Executing xog write -->
+													<soap:invoke endpoint="internal" var="result">
+														<soap:message>
+															<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xog="http://www.niku.com/xog">
+																<soapenv:Header>
+																	<xog:Auth>
+																		<xog:SessionID>${sessionID}</xog:SessionID>
+																	</xog:Auth>
+																</soapenv:Header>
+																<soapenv:Body>
+																	<gel:include select="$updateuser"/>
+																</soapenv:Body>
+															</soapenv:Envelope>
+														</soap:message>
+													</soap:invoke>
+													<!-- Checking if xog returned any error -->
+													<gel:set asString="true" select="$result//Statistics/@failureRecords" var="failureRecs"/>
+													<core:if test="${failureRecs != '0'}">
+														<gel:log level="error" message="A Problem with the XOG happened!"/>
+														<gel:log level="error">Caught Exception was: <gel:expr select="$result"/>
+														</gel:log>
+													</core:if>
+												</core:forEach>
+												<!-- Logging out of Clarity -->
+												<soap:invoke endpoint="internal" var="logout">
+													<soap:message>
+														<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xog="http://www.niku.com/xog">
+															<soapenv:Header>
+																<xog:Auth>
+																	<xog:SessionID>${sessionID}</xog:SessionID>
+																</xog:Auth>
+															</soapenv:Header>
+															<soapenv:Body>
+																<xog:Logout/>
+															</soapenv:Body>
+														</soapenv:Envelope>
+													</soap:message>
+												</soap:invoke>
+											</core:catch>
+											<!-- Checking if custom script has returned any error -->
+											<core:if test="${ customScript != null }">
+												<gel:log level="error" message="Error: ${customScript}"/>
+											</core:if>
+										</gel:script>
+									</scriptText>
+									<scriptParameter isSecure="false" name="xogUser"/>
+								</customScript>
+								<Notifications notifyOwner="false">
+									<NotifyWhen stepActionInError="false" stepActionPerformed="false" value="0"/>
+									<Assignees/>
+								</Notifications>
+							</Action>
+						</Operations>
+						<TransitionRestrictions>
+							<TransitionRestriction>
+								<Join type="BPM_JT_NONE">
+									<Condition sequencNo="1" type="BPM_SCT_PRECONDITION"/>
+								</Join>
+							</TransitionRestriction>
+							<TransitionRestriction>
+								<Split type="BPM_ST_SEQUENCE">
+									<Condition sequencNo="1" type="BPM_SCT_POSTCONDITION">
+										<Transitions>
+											<Transition to="Finish"/>
+										</Transitions>
+									</Condition>
+								</Split>
+							</TransitionRestriction>
+						</TransitionRestrictions>
+					</Step>
+				</Steps>
+				<Groups/>
+				<OBSAssocs complete="false"/>
+			</Process>
+		</Processes>
+		<lookups update="true">
+			<staticLookup autoSuggestEnabled="true" autoSuggestMaxSuggestions="10" code="CAL_EVENT_PRIORITY" hiddenAttributeName="id" sortStyle="manual"
+    source="niku.com" status="active" update="true">
+				<nls description="Prioritat dels esdeveniments del calendari" languageCode="ca" name="Prioritat del calendari"/>
+				<nls description="Priorita události kalendáře" languageCode="cs" name="Priorita kalendáře"/>
+				<nls description="Prioritet for kalenderaftale" languageCode="da" name="Kalenderprioritet"/>
+				<nls description="Kalenderereignis - Priorität" languageCode="de" name="Kalenderpriorität"/>
+				<nls description="Calendar Event Priority" languageCode="en" name="Calendar Priority"/>
+				<nls description="Prioridad de los eventos del calendario" languageCode="es" name="Prioridad del calendario"/>
+				<nls description="Kalenteritapahtuman prioriteetti" languageCode="fi" name="Kalenteriprioriteetti"/>
+				<nls description="Priorité des événements du calendrier" languageCode="fr" name="Priorité sur le calendrier"/>
+				<nls description="Naptáresemény prioritása" languageCode="hu" name="Naptár prioritása"/>
+				<nls description="Priorità eventi calendario" languageCode="it" name="Priorità calendario"/>
+				<nls description="カレンダ イベントの優先度" languageCode="ja" name="カレンダの優先度"/>
+				<nls description="일정 이벤트 우선 순위" languageCode="ko" name="일정 우선 순위"/>
+				<nls description="Prioriteit agenda-evenement" languageCode="nl" name="Agenda prioriteit"/>
+				<nls description="Kalenderbegivenhetsprioritet" languageCode="no" name="Kalenderprioritet"/>
+				<nls description="Priorytet zdarzenia w kalendarzu" languageCode="pl" name="Priorytet kalendarza"/>
+				<nls description="Prioridade do evento do calendário" languageCode="pt" name="Prioridade do calendário"/>
+				<nls description="Приоритет события календаря" languageCode="ru" name="Приоритет календаря"/>
+				<nls description="Prioritet för kalenderhändelse" languageCode="sv" name="Kalenderprioritet"/>
+				<nls description="Takvim Olayı Önceliği" languageCode="tr" name="Takvim Önceliği"/>
+				<nls description="日历事件优先级" languageCode="zh" name="日历优先级"/>
+				<nls description="行事曆事件優先順序" languageCode="zh_TW" name="行事曆優先順序"/>
+				<lookupValue code="CAL_LOW" sortOrder="1" status="active">
+					<nls description="Sota" languageCode="ca" name="Sota"/>
+					<nls description="Nízké" languageCode="cs" name="Nízké"/>
+					<nls description="Lav" languageCode="da" name="Lav"/>
+					<nls description="Niedrig" languageCode="de" name="Niedrig"/>
+					<nls description="Low" languageCode="en" name="Low"/>
+					<nls description="Bajo" languageCode="es" name="Bajo"/>
+					<nls description="低" languageCode="ja" name="低"/>
+					<nls description="Laag" languageCode="nl" name="Laag"/>
+					<nls description="Lav" languageCode="no" name="Lav"/>
+					<nls description="Baixo" languageCode="pt" name="Baixo"/>
+					<nls description="Låg" languageCode="sv" name="Låg"/>
+					<nls description="低" languageCode="zh" name="低"/>
+					<nls description="低" languageCode="zh_TW" name="低"/>
+					<nls description="Düşük" languageCode="tr" name="Düşük"/>
+					<nls description="Matala" languageCode="fi" name="Matala"/>
+					<nls description="Faible" languageCode="fr" name="Faible"/>
+					<nls description="Alacsony" languageCode="hu" name="Alacsony"/>
+					<nls description="Bassa" languageCode="it" name="Bassa"/>
+					<nls description="낮음" languageCode="ko" name="낮음"/>
+					<nls description="Niski" languageCode="pl" name="Niski"/>
+					<nls description="Низкий" languageCode="ru" name="Низкий"/>
+				</lookupValue>
+				<lookupValue code="CAL_MEDIUM" sortOrder="2" status="active">
+					<nls description="Medi" languageCode="ca" name="Medi"/>
+					<nls description="Střední" languageCode="cs" name="Střední"/>
+					<nls description="Mellem" languageCode="da" name="Mellem"/>
+					<nls description="Mittel" languageCode="de" name="Mittel"/>
+					<nls description="Medium" languageCode="en" name="Medium"/>
+					<nls description="Medio" languageCode="es" name="Medio"/>
+					<nls description="Keskisuuri" languageCode="fi" name="Keskisuuri"/>
+					<nls description="Moyen(ne)" languageCode="fr" name="Moyen(ne)"/>
+					<nls description="Közepes" languageCode="hu" name="Közepes"/>
+					<nls description="Media" languageCode="it" name="Media"/>
+					<nls description="中" languageCode="ja" name="中"/>
+					<nls description="중간" languageCode="ko" name="중간"/>
+					<nls description="Gemiddeld" languageCode="nl" name="Gemiddeld"/>
+					<nls description="Middels" languageCode="no" name="Middels"/>
+					<nls description="Średni" languageCode="pl" name="Średni"/>
+					<nls description="Médio" languageCode="pt" name="Médio"/>
+					<nls description="Средний" languageCode="ru" name="Средний"/>
+					<nls description="Medel" languageCode="sv" name="Medel"/>
+					<nls description="Orta" languageCode="tr" name="Orta"/>
+					<nls description="中" languageCode="zh" name="中"/>
+					<nls description="中" languageCode="zh_TW" name="中"/>
+				</lookupValue>
+				<lookupValue code="CAL_HIGH" sortOrder="3" status="active">
+					<nls description="Alt" languageCode="ca" name="Alt"/>
+					<nls description="Vysoké" languageCode="cs" name="Vysoké"/>
+					<nls description="Høj" languageCode="da" name="Høj"/>
+					<nls description="Hoch" languageCode="de" name="Hoch"/>
+					<nls description="High" languageCode="en" name="High"/>
+					<nls description="Alto" languageCode="es" name="Alto"/>
+					<nls description="Korkea" languageCode="fi" name="Korkea"/>
+					<nls description="Elevé(e)" languageCode="fr" name="Elevé(e)"/>
+					<nls description="Magas" languageCode="hu" name="Magas"/>
+					<nls description="Alta" languageCode="it" name="Alta"/>
+					<nls description="高" languageCode="ja" name="高"/>
+					<nls description="높음" languageCode="ko" name="높음"/>
+					<nls description="Hoog" languageCode="nl" name="Hoog"/>
+					<nls description="Høy" languageCode="no" name="Høy"/>
+					<nls description="Wysoki" languageCode="pl" name="Wysoki"/>
+					<nls description="Alto" languageCode="pt" name="Alto"/>
+					<nls description="Высокий" languageCode="ru" name="Высокий"/>
+					<nls description="Hög" languageCode="sv" name="Hög"/>
+					<nls description="Yüksek" languageCode="tr" name="Yüksek"/>
+					<nls description="高" languageCode="zh" name="高"/>
+					<nls description="高" languageCode="zh_TW" name="高"/>
+				</lookupValue>
+				<displayedSuggestionAttributes>
+					<displayedSuggestionAttribute value="name"/>
+				</displayedSuggestionAttributes>
+				<searchedSuggestionAttributes>
+					<searchedSuggestionAttribute value="name"/>
+				</searchedSuggestionAttributes>
+			</staticLookup>
+		</lookups>
+	</contentPack>
+</NikuDataBus>
