@@ -13,12 +13,12 @@ It implements a process called Deactivate Users which you can both manually run 
 - Extract the zip file to your C:\temp directory
 - Open the file cld_install.bat
 - Inform the correct values to the following variables: 
--- XOG_HOME = XOG client installation directory, i.e. c:\apps\xog\bin
--- SERVERNAME = Clarity hostname or IP, i.e. cappm1561
--- PORTNUMBER = Clarity port, i.e. 80, 443
--- SSLENABLED = Inform if Clarity is running over HTTPS or not, i.e true or false
--- USERNAME = User with XOG rights, i.e. admin, xog
--- PASSWORD = User password
+  - XOG_HOME = XOG client installation directory, i.e. c:\apps\xog\bin
+  - SERVERNAME = Clarity hostname or IP, i.e. cappm1561
+  - PORTNUMBER = Clarity port, i.e. 80, 443
+  - SSLENABLED = Inform if Clarity is running over HTTPS or not, i.e true or false
+  - USERNAME = User with XOG rights, i.e. admin, xog
+  - PASSWORD = User password
 - Save and close the file
 - Run the file cld_install.bat
 - Check the output file for errors at C:\temp\cld_install\output
