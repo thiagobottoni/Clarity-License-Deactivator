@@ -9,7 +9,7 @@ It implements a process called Deactivate Users which you can both manually run 
 
 ## How to install
 - Make sure you have the XOG client installed on your machine
-- Download the latest release of Clarity License Deactivator package here
+- Download the latest release of Clarity License Deactivator package [HERE](https://github.com/thiagobottoni/Clarity-License-Deactivator/releases)
 - Extract the zip file to your C:\temp directory
 - Open the file cld_install.bat
 - Inform the correct values to the following variables: 
@@ -22,6 +22,9 @@ It implements a process called Deactivate Users which you can both manually run 
 - Save and close the file
 - Run the file cld_install.bat
 - Check the output file for errors at C:\temp\cld_install\output
+
+## Languages
+This release is available in two languages: English and Brazilian Portuguese
 
 ## Important
 It works for On Premise customers only, even if you use LDAP, SSO or Clarity user directory! It does not work for SaaS customers, since Broadcom On Demand Portal has its own user directory system.
