@@ -28,4 +28,4 @@ This release is available in two languages: English and Brazilian Portuguese.
 
 ## Important
 - It works for On Premise customers only, even if you use LDAP, SSO or Clarity user directory! It does not work for SaaS customers, since Broadcom On Demand Portal has its own user directory system.
-- This package was built for Oracle database. If you use SQL Server, you have to adapt the SQL queries inside the GEL script.
+- This package was built for Oracle database. If you use SQL Server, you have to adapt the SQL query inside the GEL script.
